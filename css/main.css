@@ -51,7 +51,6 @@ header .btn-book {
 /* 히어로 */
 .hero {
   height: 80vh;
-  background: url("../img/hero_paint.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
