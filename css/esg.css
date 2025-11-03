@@ -1,0 +1,396 @@
+/* -------------------------------------
+   🌿 우스레공방 ESG & 탄소중립 전용 스타일
+   톤앤매너: 자연, 따뜻함, 우드&그린, 공방 감성
+-------------------------------------- */
+
+/* -------------------------------------
+   🟩 버튼 스타일 (Primary / Ghost)
+   ESG 톤: 검정 → 회색 전환 + 부드러운 라운드
+-------------------------------------- */
+
+/* 공통 버튼 기본 스타일 */
+.btn,
+.btn-primary,
+.btn-ghost {
+  margin-top: 2rem;
+  display: inline-block;
+  font-family: "Pretendard Variable", sans-serif;
+  font-weight: 600;
+  padding: 0.8em 1.8em;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: -0.2px;
+}
+
+/* ✅ Primary 버튼 */
+.btn-primary {
+  background-color: #111; /* 기본 검정 */
+  color: #fff; /* 흰색 텍스트 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #e0e0e0; /* 회색으로 부드럽게 전환 */
+  color: #111; /* 글자 검정으로 반전 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ✅ Ghost 버튼 */
+.btn-ghost {
+  background-color: transparent; /* 기본 투명 */
+  color: #111; /* 검정 텍스트 */
+  border: 2px solid #111;
+}
+
+.btn-ghost:hover {
+  background-color: #e0e0e0; /* 옅은 회색 배경 */
+  color: #111; /* 유지 */
+  border-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* 클릭 시 약간 눌리는 느낌 */
+.btn-primary:active,
+.btn-ghost:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* 기본 글꼴 및 배경 */
+body {
+  font-family: "Pretendard Variable", sans-serif;
+  background-color: #fdfcf9;
+  color: #2f2f2f;
+  line-height: 1.8;
+  animation: bgGradient 10s ease-in-out infinite alternate;
+  background: linear-gradient(180deg, #e9f8e4 0%, #fdfcf9 100%);
+  background-attachment: fixed;
+}
+
+/* 헤더 */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+header .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+header .gnb ul {
+  display: flex;
+  gap: 1.5rem;
+}
+header .btn-book {
+  margin-left: 1rem;
+}
+
+/* 섹션 공통 */
+.page {
+  padding: 100px 0;
+  position: relative;
+}
+
+.page h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #3d553d;
+  margin-bottom: 12px;
+}
+
+.page .meta {
+  text-align: center;
+  color: #7c8c7c;
+  font-size: 1.05rem;
+  margin-bottom: 50px;
+  letter-spacing: -0.3px;
+}
+
+/* 프로그램 */
+.program {
+  background-color: #888888;
+}
+
+/* 카드 공통 스타일 */
+.grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 0 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* 🌳 1. 우스레 철학 */
+.philosophy {
+  background-color: #888888;
+}
+
+.philosophy p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 🪵 2. 탄소 저장 원리 */
+.carbon-principle {
+  background-color: #888888;
+}
+
+.carbon-principle .card {
+  background: #fffefc;
+  border: 1px solid #eee5d3;
+}
+
+.carbon-principle h4 {
+  color: #3b4e3b;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+.carbon-principle .card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ♻️ 3. 실천 이야기 */
+.practice {
+  background-color: #888888;
+}
+
+.practice p {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+.practice .card {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.practice .card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.practice .card:hover img {
+  transform: scale(1.05);
+}
+
+.practice .card .meta {
+  background: #f0f4ef;
+  color: #486248;
+  font-weight: 600;
+  padding: 14px 0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 👩‍🏫 4. 강사 양성과 확산 */
+.instructors {
+  background-color: #888888;
+}
+
+.instructors p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3f3f3f;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+.instructors::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: #8eb78e;
+}
+
+/* 🌱 5. 순환 구조 */
+.circulation {
+  background-color: #888888;
+}
+
+.circulation-flow .card {
+  border: 1px solid #e1e9e1;
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px;
+}
+
+.circulation-flow h4 {
+  color: #315931;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.circulation-flow p {
+  color: #4b564b;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.circulation-flow .card:hover {
+  background: #edf6ec;
+  transform: translateY(-5px);
+  border-color: #a3c9a3;
+}
+
+/* 색 변환 애니메이션 정의 */
+@keyframes bgGradient {
+  0% {
+    background: linear-gradient(180deg, #c9edc0 0%, #e4f5e0 100%); /* 중간 톤 */
+  }
+  100% {
+    background: linear-gradient(
+      180deg,
+      #8bbf8a 0%,
+      #b4d8b1 100%
+    ); /* 짙은 초록 */
+  }
+}
+
+/* 🌤️ 섹션 애니메이션 */
+.page h3,
+.page .meta,
+.page p,
+.page .card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.page .card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.page .card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.page .card:nth-child(3) {
+  animation-delay: 0.35s;
+}
+.page .card:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+/* 푸터 */
+footer {
+  margin-top: 4rem;
+  background: var(--text-color);
+  color: var(--white);
+  padding: 2em 0;
+  text-align: center;
+}
+footer .sns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+footer .sns a {
+  color: var(--white);
+  transition: opacity 0.3s;
+}
+footer .sns a:hover {
+  opacity: 0.7;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🍃 반응형 디자인 */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  header .gnb {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+  .page {
+    padding: 70px 0;
+  }
+
+  .page h3 {
+    font-size: 1.7rem;
+  }
+
+  .page .meta {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .practice .card img {
+    height: 200px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 10px;
+  }
+}
